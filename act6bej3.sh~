@@ -1,0 +1,32 @@
+contNumDia=1
+contDiaSemana=1
+for litros in $(cat precipitaciones.txt);do
+    if [ $litros -eq 0 ]; then
+	case  $contNumDia in
+	    1)       
+     		dia=Lunes
+		;;
+	    2)
+		dia=Martes
+		;;
+	    3)
+		dia=Miercoles
+		;;
+	    4)
+		dia=Jueves
+		;;
+	    5)
+		dia=Viernes
+		;;
+	    6)
+		dia=Sabado
+		;;
+	    *)
+		dia=Domingo
+		;;
+esac
+
+    fi
+
+
+done

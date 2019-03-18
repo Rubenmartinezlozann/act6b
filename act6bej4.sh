@@ -1,0 +1,23 @@
+contNumPares=0
+contNumImpares=0
+for num in $(cat numeros.txt);do
+    if [ `expr $num % 2` -eq 0 ];then
+	numPares[$contNumPares]=$num
+	contNumPares=$((contNumPares+1))
+    else
+	numImpares[$contNumImpares]=$num
+	contNumImpares=$((contNumImpares+1))
+    fi
+done
+echo "Numeros pares: "
+for item in ${numPares[*]};do
+    echo "$item"
+done
+echo "Hay ${contNumPares} numeros pares"
+echo ""
+echo "Numeros impares: "
+for item in ${numImpares[*]};do
+    echo "$item"
+done
+echo "Hay ${contNumImpares} numeros impares"
+

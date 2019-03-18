@@ -1,0 +1,6 @@
+for directorio in $(cat nombres.txt);do
+    echo"/home/$directorio"
+    for i in `seq 1 $1`;do
+	echo "/home/${directorio}/personal$i"
+    done
+done

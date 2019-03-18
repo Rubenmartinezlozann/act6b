@@ -1,0 +1,8 @@
+total=0
+contador=0
+for litros in $(cat /home/ruben/act6b/precipitaciones.txt);do
+    total=$((total+litros))
+    contador=$((contador+1))
+done
+media=$((total/contador))
+echo "La media de precipitaciones es $media"
